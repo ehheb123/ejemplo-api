@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="form-group">
-        <label for="questions-number">Elije cuantas preguntas quieres</label>
+        <label for="questions-number">Elije cuantas preguntas quieres: </label>
         <select onchange="getQuestions()" class="form-control" id="questions-number">
           <option value="5">5</option>
           <option value="10">10</option>
@@ -16,8 +16,20 @@
           <option value="20">20</option>
         </select>
       </div>
-<div class="container mt-5">
 
+      <div class="form-group">
+        <label for="questions-difficulty">Elije la dificultad de las preguntas: </label>
+        <select onchange="getQuestions()" class="form-control" id="questions-difficulty">
+          <option value="any">Any Difficulty</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+<div class="container mt-5">
+  <div>
+    
+  </div>
 </div>
     <div id="container-cards">
 
