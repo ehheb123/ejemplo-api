@@ -15,13 +15,43 @@
           <option value="15">15</option>
           <option value="20">20</option>
         </select>
+        <select onchange="getQuestions()" class="form-control" id="question-category">
+          <option value="any">Any Category</option>
+          <option value="9">General Knowledge</option>
+          <option value="10">Entertainment: Books</option>
+          <option value="11">Entertainment: Film</option>
+          <option value="12">Entertainment: Music</option>
+          <option value="13">Entertainment: Musicals & Theatres</option>
+          <option value="14">Entertainment: Television</option>
+          <option value="15">Entertainment: Video Games</option>
+          <option value="16">Entertainment: Board Games</option>
+          <option value="17">Science &amp; Nature</option>
+          <option value="18">Science: Computers</option>
+          <option value="19">Science: Mathematics</option>
+          <option value="20">Mythology</option>
+          <option value="21">Sports</option>
+          <option value="22">Geography</option>
+          <option value="23">History</option>
+          <option value="24">Politics</option>
+          <option value="25">Art</option>
+          <!-- ... -->
+        </select>
+        <select onchange="getQuestions()" class="form-control" id="question-difficulty">
+          <option value="any">Any Difficulty</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <select onchange="getQuestions()" class="form-control" id="question-type">
+          <option value="any">Any Type</option>
+          <option value="multiple">Multiple Choice</option>
+          <option value="boolean">True / False</option>
+        </select>
       </div>
-<div class="container mt-5">
-
-</div>
-    <div id="container-cards">
-
-    </div>
+    <form  class="container mt-5">
+    </form>
+    <!--<div id="container-cards">
+    </div>-->
     <script src="./js/main.js"></script>
 </body>
 </html>
