@@ -1,12 +1,21 @@
 
 
 
+
+
 function getQuestions() {
     const questionQuantity = document.getElementById('questions-number').value;
-    fetch(`https://opentdb.com/api.php?amount=${questionQuantity}`)
+    const questionCategory = document.getElementById('question-category').value;
+    const questionType = document.getElementById('question-type').value;
+    const questionDifficulty = document.getElementById('question-difficulty').value;
+    var url = `https://opentdb.com/api.php?amount=${questionQuantity}`
+    if(questionCategory !== 'any'){ url += `&category=${questionCategory}`}
+    if(questionDifficulty !== 'any'){ url +=`&difficulty=${questionDifficulty}`}
+    if(questionType !== 'any'){ url += `&type=${questionType}`}
+    fetch(url)
         .then(response => response.json())
-        .then(data => printCards(data.results))
-        console.log(questionQuantity);
+        .then(data => {if(data.results.length == 0){ alert('no hay preguntas suficientes')} else {printCards(data.results)}
+    console.log(data.results)})
 }
 
 
@@ -14,7 +23,7 @@ function getQuestions() {
 
     function printCards(questions) {
 
-        const container = document.getElementsByClassName('container')[0];
+        const container = document.getElementsByClassName('container')[0];//se pone el 0 porque trae el elemento en la primera posicion
         container.innerHTML = '';
 
         questions.forEach(question => {
@@ -38,26 +47,24 @@ function getQuestions() {
 
     }
 
+
+
     function returnAnswersHTML (corrects, incorrects) {
         
-        const correctHTML = `<div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">
-                                ${corrects}
-                                </label>
-                            </div>`
+        var answers = [];
+        answers.push(...incorrects)
+        answers.splice(Math.round(Math.random() * answers.length), 0, corrects);
         
-        
-        let incorrectHTML = ''
-        incorrects.forEach((incorrect) => {
-            incorrectHTML += `<div class="form-check">
+        let answerstHTML = ''
+        answers.forEach((answer) => {
+            answerstHTML += `<div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                             <label class="form-check-label" for="exampleRadios1">
-                            ${incorrect}
+                            ${answer}
                             </label>
                         </div>`
 
         })
-        return correctHTML + incorrectHTML;
+        return answerstHTML;
 
     }
