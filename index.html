@@ -9,13 +9,13 @@
 <body>
     <div class="form-group">
         <label for="questions-number">Elije cuantas preguntas quieres</label>
-        <select onchange="getQuestions()" class="form-control" id="questions-number">
+        <select class="form-control" id="questions-number">
           <option value="5">5</option>
           <option value="10">10</option>
           <option value="15">15</option>
           <option value="20">20</option>
         </select>
-        <select onchange="getQuestions()" class="form-control" id="question-category">
+        <select class="form-control" id="question-category">
           <option value="any">Any Category</option>
           <option value="9">General Knowledge</option>
           <option value="10">Entertainment: Books</option>
@@ -36,13 +36,13 @@
           <option value="25">Art</option>
           <!-- ... -->
         </select>
-        <select onchange="getQuestions()" class="form-control" id="question-difficulty">
+        <select class="form-control" id="question-difficulty">
           <option value="any">Any Difficulty</option>
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
           <option value="hard">Hard</option>
         </select>
-        <select onchange="getQuestions()" class="form-control" id="question-type">
+        <select class="form-control" id="question-type">
           <option value="any">Any Type</option>
           <option value="multiple">Multiple Choice</option>
           <option value="boolean">True / False</option>
@@ -52,6 +52,6 @@
     </form>
     <!--<div id="container-cards">
     </div>-->
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
