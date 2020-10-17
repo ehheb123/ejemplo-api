@@ -1,0 +1,45 @@
+.body-background {
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+}
+
+.space-top {
+    margin-top: 2%;
+}
+
+.resize-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40%;
+    max-height: 40%;
+    
+}
+.margin-questions {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.button-properties {
+    margin-top: 2%;
+    background: #f5f5f5;
+    border: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+}
+
+.try-cards {
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+}
+
+.questions-margin {
+    margin-top: 2%;
+}

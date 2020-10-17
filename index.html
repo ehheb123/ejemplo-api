@@ -3,37 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trivia API</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
-    <div class="form-group">
-        <label for="questions-number">Elije cuantas preguntas quieres: </label>
-        <select onchange="getQuestions()" class="form-control" id="questions-number">
-          <option value="5">5</option>
-          <option value="10">10</option>
-          <option value="15">15</option>
-          <option value="20">20</option>
-        </select>
-      </div>
+<!-- ///bg-dark -->
+<body class="body-background ">
+    <div>
+      <img src="https://opentdb.com/images/logo.png" alt="trivia" class="resize-image space-top">
+    </div>
 
-      <div class="form-group">
-        <label for="questions-difficulty">Elije la dificultad de las preguntas: </label>
-        <select onchange="getQuestions()" class="form-control" id="questions-difficulty">
-          <option value="any">Any Difficulty</option>
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
-        </select>
-      </div>
-<div class="container mt-5">
-  <div>
-    
-  </div>
-</div>
-    <div id="container-cards">
+    <div class="form-group text-white margin-questions mt-5">
+        <label for="questions-number">Elije cuantas preguntas quieres: </label>
+          <select class="form-control" id="questions-number">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+
+        <label class="questions-margin" for="questions-category">Elije la categoria de las preguntas: </label>
+          <select class="form-control" id="questions-category">
+            <option value="any">Any category</option>
+            <option value="9">General Knowledge</option>
+            <option value="10">Entertainment: Books</option>
+            <option value="11">Entertainment: Film</option>
+            <option value="12">Entertainment: Music</option>
+            <option value="13">Entertainment: Musical & Theatres</option>
+            <option value="14">Entertainment: Television</option>
+            <option value="15">Entertainment: Video Games</option>
+            <option value="16">Entertainment: Board Game</option>
+            <option value="17">Science & Nature</option>
+            <option value="18">Science: Computers</option>
+            <option value="19">Science: Mathematics</option>
+            <option value="20">Mythology</option>
+            <option value="21">Sports</option>
+            <option value="22">Geography</option>
+            <option value="23">History</option>
+            <option value="24">Politics</option>
+            <option value="25">Art</option>
+          </select>
+
+        <label class="questions-margin" for="questions-difficulty">Elije la dificultad de las preguntas: </label>
+          <select class="form-control" id="questions-difficulty">
+            <option value="any">Any Difficulty</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+
+        <label class="questions-margin" for="questions-type">Elije la dificultad de las preguntas: </label>
+          <select class="form-control" id="questions-type">
+            <option value="any">Any Type</option>
+            <option value="multiple">Multiple Choice</option>
+            <option value="boolean">True / False</option>
+          </select>
+    </div>
+
+    <form class="container mt-5">
+
+    </form>
+    <!-- <div id="container-cards">
+
+    </div> -->
+    <div class="mb-5">
 
     </div>
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
